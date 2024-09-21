@@ -1,0 +1,13 @@
+{
+  "name": "http",
+  "version": "1.0.0",
+  "main": "one.js",
+  "type": "module",
+  "scripts": {
+    "start": "nodemon server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}

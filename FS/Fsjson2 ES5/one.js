@@ -26,3 +26,4 @@ fs.writeFile('female.json',JSON.stringify(femaleUsers),(err)=>{
 })
 })
 })
+// using filter
