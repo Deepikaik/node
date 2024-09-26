@@ -9,9 +9,10 @@ router.get("/read", async (req,resp)=>{
 })
 
 router.post("/create",async(req,resp)=>{
-    let employee=req.body
-    let employees=await getEmployees()
-    let emp_data= employees.find((emp)=>{
+    let employee=req.body           //requesting a new body   
+    let employees=await getEmployees()   //for files getemployees but for database find method
+    let emp_data= employees.find((emp)=>{            
+    //  some value    []
         return emp.eid== employee.eid;
     })
     console.log(emp_data)
@@ -30,7 +31,7 @@ router.post("/create",async(req,resp)=>{
     let employees=await getEmployees()
     return resp.json(employees)
 }) */
-router.put("/update/:eid",async(req,resp)=>{
+router.put("/update/:id",async(req,resp)=>{
     let emp_id=req.params.id
     let employee=req.body;
     let employees=await getEmployees();
@@ -70,6 +71,8 @@ router.delete("/del/:id",async(req,resp)=>{
     saveemployees(remaining_employees)
     return resp.status(208).json({"msg":"deleted successfully"})
 })
+
+
 
 let getEmployees=()=>{
     let emp_data=fs.readFileSync("data.json",'utf-8')
