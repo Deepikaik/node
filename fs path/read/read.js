@@ -9,12 +9,13 @@ console.log(cwf)*/
 
 
 //es6
+
 import path from 'path'
-import{cwd} from 'process'
+import cwd from 'process'
 
 let cwdir =path.join(process.cwd())
-let cwfile=path.join(process.cwf)
+let cwfile=path.join(process)
 
-console.log(cwd)}
+console.log(cwd)
 console.log(cwdir)
 console.log(cwfile)

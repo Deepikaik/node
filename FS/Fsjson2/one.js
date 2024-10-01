@@ -5,7 +5,7 @@ fs.readFile('./data.json','utf-8',(err,data)=>{
 
     let maleUsers=[]
     let femaleUsers=[]
-    let users=JSON.parse(data)
+    let users=JSON.parse(data) //to convert string to object
     console.log(typeof(users))
 
     for(let user of users){     //'let' is there because it is ES6 format
@@ -18,6 +18,8 @@ fs.readFile('./data.json','utf-8',(err,data)=>{
     }
     console.log("female users:",femaleUsers.length)
     console.log("male users:",maleUsers.length)
+
+    
 fs.writeFile('male.json',JSON.stringify(maleUsers),(err)=>{
     if (err) throw err
         console.log("maleUsers created")

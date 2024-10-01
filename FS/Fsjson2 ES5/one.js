@@ -1,14 +1,15 @@
 var fs = require('fs');
-let maleUsers=[]
-let femaleUsers=[]
+
 
 fs.readFile('./data.json','utf-8',(err,data)=>{
     if (err) throw err
 
+    let maleUsers=[]
+    let femaleUsers=[]
     let users=JSON.parse(data)
     console.log(typeof(users))
 
-    for(user of users){     
+    for(let user of users){     
         if (user.gender=="Male"){
             maleUsers.push(user)
         }
